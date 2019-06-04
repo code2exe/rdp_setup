@@ -13,11 +13,11 @@ sleep 1s
 echo "1. Xfce4 \n"
 echo "2. KDE Plasma Desktop \n"
 echo "3. Ubuntu Mate Desktop \n"
-COUNTER = 0
-while [ $COUNTER -lt 4]
+c = 0
+while [[ $c -lt "4" ]]
     do
         read  -p 'Input your choice: ' i
-        if [$i -eq 1] 
+        if [[ $i == "1" ] 
         then
             echo "You selected xfce4"
             sudo apt-get install -y Xfce4
@@ -27,7 +27,7 @@ while [ $COUNTER -lt 4]
             echo "XFCE4 successfully Installed!!  \n \nRDP Started!!"
             echo "Connect with your username $(whoami) and password: to $(wget -qO- ifconfig.co) at port 3389"
             break
-        elif [$i -eq 2] 
+        elif [[ $i == "2" ] 
         then
             echo "You selected Kde Plasma Desktop"
             sudo apt-get install -y kde-plasma-desktop
@@ -37,7 +37,7 @@ while [ $COUNTER -lt 4]
             echo "Kde Plasma Desktop successfully Installed!!  \n \nRDP Started!!"
             echo "Connect with your username $(whoami) and password: to $(wget -qO- ifconfig.co) at port 3389"
             break
-        elif [$i -eq 3] 
+        elif [[ $i == "3" ] 
         then
             echo "You selected Ubuntu Mate Desktop"
             sudo apt-get install -y ubuntu-mate-desktop
@@ -49,9 +49,9 @@ while [ $COUNTER -lt 4]
             break
 
         else
-            echo "Invalid Selection!!  $((3-$COUNTER)) chances left.."
+            echo "Invalid Selection!!  $[[ 3 - $COUNTER ]] chances left.."
 
         fi
-        let COUNTER=COUNTER+1
+        let c=c+1
 done 
 

@@ -17,7 +17,7 @@ c = 0
 while [[ $c -lt "4" ]]
     do
         read  -p 'Input your choice: ' i
-        if [[ $i == "1" ] 
+        if [[ $i == "1" ]]
         then
             echo "You selected xfce4"
             sudo apt-get install -y Xfce4
@@ -27,7 +27,7 @@ while [[ $c -lt "4" ]]
             echo "XFCE4 successfully Installed!!  \n \nRDP Started!!"
             echo "Connect with your username $(whoami) and password: to $(wget -qO- ifconfig.co) at port 3389"
             break
-        elif [[ $i == "2" ] 
+        elif [[ $i == "2" ]]
         then
             echo "You selected Kde Plasma Desktop"
             sudo apt-get install -y kde-plasma-desktop
@@ -37,7 +37,7 @@ while [[ $c -lt "4" ]]
             echo "Kde Plasma Desktop successfully Installed!!  \n \nRDP Started!!"
             echo "Connect with your username $(whoami) and password: to $(wget -qO- ifconfig.co) at port 3389"
             break
-        elif [[ $i == "3" ] 
+        elif [[ $i == "3" ]]
         then
             echo "You selected Ubuntu Mate Desktop"
             sudo apt-get install -y ubuntu-mate-desktop
@@ -53,5 +53,5 @@ while [[ $c -lt "4" ]]
 
         fi
         let c=c+1
-done 
+done
 

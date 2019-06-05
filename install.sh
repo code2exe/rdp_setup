@@ -49,7 +49,7 @@ while [[ $c -lt "4" ]]
             break
 
         else
-            echo "Invalid Selection!!  $[[ 3 - $COUNTER ]] chances left.."
+            echo "Invalid Selection!!  $[[ 3 - $c ]] chances left.."
 
         fi
         let c=c+1
